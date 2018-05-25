@@ -76,7 +76,8 @@ If you have further questions, ask the instructor.
 
 <script type="text/javascript">
 $(function() {
-	if ($('#pnum').text() === '') {
+	var pnum = $('#pnum').text();
+	if (!pnum || pnum === '' || !parseInt(pnum, 10)) {
 		$('#number').css('color', '#FF0000');
 	}
 });
