@@ -51,7 +51,7 @@ Write your answer here:
 </div>
 
 <div class="ui container" style="margin-top:2em">
-	<a href="etherpad-link-here" target="_blank" class="ui animated button" tabindex="0">
+	<a id="etherpad-link" href="https://etherpad.wikimedia.org/p/ubicomp-oulu-study-T1-P" target="_blank" class="ui animated button" tabindex="0">
 	  <span class="visible content">Start Task 1</span>
 	  <span class="hidden content">
 	    <i class="right arrow icon"></i>
@@ -68,7 +68,13 @@ Write your answer here:
 
 <script type="text/javascript">
 	$(document).ready(function() {
-
+		var pnum = findGetParameter('p');
+		if (!pnum) {
+			alert('Missing participant number!')
+		} else {
+			// append the get parameter to the etherpad url
+			$('#etherpad-link').attr('href', $('#etherpad-link').attr('href') + pnum)
+		}
 	});
 </script>
 
