@@ -40,7 +40,7 @@ body{
 
 
 <div class="ui container" style="margin-top:2em">
-	<a href="https://docs.google.com/forms/d/e/1FAIpQLSdRQHbMmTA0i6A1JXGIWsId50Vp5LT2l0g4fhivQ_OF3oVbfw/viewform?usp=sf_link" target="_blank" class="ui animated button" tabindex="0">
+	<a id="survey-url" href="https://docs.google.com/forms/d/e/1FAIpQLSdRQHbMmTA0i6A1JXGIWsId50Vp5LT2l0g4fhivQ_OF3oVbfw/viewform?usp=pp_url&entry.1702319830=*%7Cp%7C*" target="_blank" class="ui animated button" tabindex="0">
 	  <span class="visible content">Go to the survey</span>
 	  <span class="hidden content">
 	    <i class="right arrow icon"></i>
@@ -59,9 +59,15 @@ body{
 
 
 <script type="text/javascript">
-	$(document).ready(function() {
-
-	});
+$(document).ready(function() {
+	var pnum = findGetParameter('p');
+	if (!pnum) {
+		alert('Missing participant number!')
+	} else {
+		// append the get parameter to the survey url
+		$('#survey-url').attr('href', $('#survey-url').attr('href') + '&p=' + pnum)
+	}
+});
 </script>
 
 
