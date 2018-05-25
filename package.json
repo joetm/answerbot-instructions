@@ -1,0 +1,28 @@
+{
+  "name": "stoprasismi-instructions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "semantic-ui": "^2.3.1"
+  },
+  "devDependencies": {
+    "express-handlebars": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joetm/stoprasismi-instructions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joetm/stoprasismi-instructions/issues"
+  },
+  "homepage": "https://github.com/joetm/stoprasismi-instructions#readme"
+}
