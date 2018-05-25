@@ -7,13 +7,19 @@
     "doc": "docs"
   },
   "dependencies": {
-    "semantic-ui": "^2.3.1"
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "request": "^2.87.0",
+    "semantic-ui": "^2.3.1",
+    "winston": "^3.0.0-rc5"
   },
   "devDependencies": {
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
+    "nodemon": "^1.17.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
