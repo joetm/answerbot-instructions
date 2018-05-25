@@ -8,9 +8,6 @@
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
 <script src="semantic/dist/semantic.min.js"></script>
-<script>
-	$('.ui.checkbox').checkbox();
-</script>
 <style type="text/css">
 body{
 	text-align:left;
@@ -65,13 +62,13 @@ body{
 	<div class="ui form">
 	  <div class="inline field">
 	    <div class="ui checkbox">
-	      <input type="checkbox" tabindex="0" class="hidden">
+	      <input type="checkbox" tabindex="0" class="hidden check-answerbot">
 	      <label>I am now familiar with AnswerBot.</label>
 	    </div>
 	  </div>
 	  <div class="inline field">
 	    <div class="ui checkbox">
-	      <input type="checkbox" tabindex="0" class="hidden">
+	      <input type="checkbox" tabindex="0" class="hidden check-google">
 	      <label>I know how to use Google.</label>
 	    </div>
 	  </div>
@@ -79,13 +76,26 @@ body{
 </div>
 
 <div class="ui container" style="margin-top:2em">
-	<a href="answerbot-intro.html" class="ui animated button" tabindex="0">
+	<a href="task-1.html" class="ui animated disabled button" tabindex="0">
 	  <span class="visible content">Start Task</span>
 	  <span class="hidden content">
 	    <i class="right arrow icon"></i>
 	  </span>
 	</a>
 </div>
+
+<script type="text/javascript">
+	$('.ui.checkbox').checkbox();
+	$(document).ready(function() {
+		$('.ui.checkbox').click(function() {
+			if ($('.check-answerbot')[0].checked && $('.check-google')[0].checked) {
+				$('.ui.button').removeClass('disabled');
+			} else {
+				$('.ui.button').addClass('disabled');
+			}
+		});
+	});
+</script>
 
 
 <!--
