@@ -8,6 +8,7 @@
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
 <script src="semantic/dist/semantic.min.js"></script>
+<script src="./pnum.js"></script>
 <style type="text/css">
 body{
 	text-align:left;
@@ -26,7 +27,10 @@ body{
 </p>
 
 <p>
-Thank you for participating in this study.
+	Thank you for participating in this study.<br />
+	<span id="number">
+		You are participant number <span id="pnum"></span>.
+	</span>
 </p>
 
 <h4>Confidentiality</h4>
@@ -62,14 +66,13 @@ If you have further questions, ask the instructor.
 
 
 <div class="ui container" style="margin-top:2em">
-	<a href="answerbot-tutorial.html" class="ui animated button" tabindex="0">
+	<a id="navlink" href="answerbot-tutorial.html" class="ui animated button" tabindex="0">
 	  <span class="visible content">Next</span>
 	  <span class="hidden content">
 	    <i class="right arrow icon"></i>
 	  </span>
 	</a>
 </div>
-
 
 </body>
 </html>
