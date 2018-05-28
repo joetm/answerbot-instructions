@@ -46,8 +46,12 @@ app.get('/google/', function (req, res) {
 		const fragment = $('#ires').html();
 		// console.log('fragment', fragment);
 
+		const pagination = $('#nav').html();
+		// console.log('pagination', pagination);
+
 	    res.render('google', {
-	    	fragment
+	    	fragment,
+	    	pagination
 	    });
 	});
 });
