@@ -29,11 +29,15 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const app = express();
-app.engine('handlebars', exphbs({defaultLayout: 'searchresult'}));
+app.engine('handlebars', exphbs({
+	defaultLayout: 'searchresult',
+	// extname: '.hbs',
+	partialsDir: 'views/partials'
+}));
 app.set('view engine', 'handlebars');
 
 
-app.get('/google/', function (req, res) {
+app.get('/search/', function (req, res) {
 	logger.info(`GET: ${req.path}`);
 
 	logger.info(`FETCHING Google results`);
@@ -49,7 +53,7 @@ app.get('/google/', function (req, res) {
 		const pagination = $('#nav').html();
 		// console.log('pagination', pagination);
 
-	    res.render('google', {
+	    res.render('search', {
 	    	fragment,
 	    	pagination
 	    });
@@ -58,7 +62,7 @@ app.get('/google/', function (req, res) {
 
 app.get('/', function (req, res) {
 	logger.info('GET: /');
-    res.render('empty', {
+    res.render('home', {
     	layout: false
     });
 });
